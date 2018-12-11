@@ -103,8 +103,8 @@ class ValidateEmailsCommand extends Command
       new SpoofCheckValidation(),
     ]);
 
-    $goodEmails = fopen($this->outputDir . 'goodEmails.csv', 'b');
-    $badEmails = fopen($this->outputDir . 'badEmails.csv', 'b');
+    $goodEmails = fopen($this->outputDir . 'goodEmails.csv', 'w');
+    $badEmails = fopen($this->outputDir . 'badEmails.csv', 'w');
     foreach ($emails as $email) {
 
       if ($validator->isValid($email, $multipleValidations)) {
