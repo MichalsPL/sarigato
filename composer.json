@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/console": "^4.2",
+        "egulias/email-validator": "~2.1"
+    }
+}
