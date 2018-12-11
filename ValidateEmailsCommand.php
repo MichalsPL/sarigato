@@ -26,6 +26,9 @@ class ValidateEmailsCommand extends Command
   {
     parent::__construct($name);
     $this->setStats();
+    if (!file_exists('output')) {
+      mkdir('output', 0777, true);
+    }
   }
 
   protected function configure()
